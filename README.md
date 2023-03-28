@@ -9,3 +9,5 @@ Udemy Course by Maximilian Schwarzmüller
 03 email-validation
 
 04 food-ordering-app
+
+05 react-optimization-techniques
