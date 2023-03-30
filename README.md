@@ -13,3 +13,5 @@ Udemy Course by Maximilian Schwarzmüller
 05 react-optimization-techniques
 
 06 react-class-component
+
+07 react-sending-http-request
