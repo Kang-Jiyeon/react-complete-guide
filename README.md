@@ -11,3 +11,5 @@ Udemy Course by Maximilian Schwarzmüller
 04 food-ordering-app
 
 05 react-optimization-techniques
+
+06 react-class-component
