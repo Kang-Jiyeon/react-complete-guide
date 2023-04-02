@@ -16,6 +16,6 @@ Udemy Course by Maximilian Schwarzmüller
 
 07 react-sending-http-request
 
-08 building-custom-hook
+08 react-building-custom-hook
 
 09 react-custom-hook-http
