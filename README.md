@@ -2,13 +2,13 @@
 
 Udemy Course by Maximilian Schwarzmüller
 
-01 expense-chart
+01 react-expense-chart
 
-02 user-add-app
+02 react-user-add-app
 
-03 email-validation
+03 react-email-validation
 
-04 food-ordering-app
+04 react-food-ordering-app
 
 05 react-optimization-techniques
 
