@@ -1,15 +1,18 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import HomePage from "./pages/Home";
-import EventsPage, { loader as eventsLoader } from "./pages/Events";
+import EditEventPage from "./pages/EditEvent";
+import ErrorPage from "./pages/Error";
 import EventDetailPage, {
   loader as eventDetailLoader,
+  action as deleteEventAction,
 } from "./pages/EventDetail";
-import NewEventPage, { action as newEventAction } from "./pages/NewEvent";
-import EditEventPage from "./pages/EditEvent";
-import RootLayout from "./pages/Root";
+import EventsPage, { loader as eventsLoader } from "./pages/Events";
 import EventsRootLayout from "./pages/EventsRoot";
-import ErrorPage from "./pages/Error";
+import HomePage from "./pages/Home";
+import NewEventPage from "./pages/NewEvent";
+import RootLayout from "./pages/Root";
+import { action as manipulateEventAction } from "./components/EventForm";
+import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +20,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
+      { index: true, element: <HomePage /> },
       {
         path: "events",
         element: <EventsRootLayout />,
@@ -38,19 +38,26 @@ const router = createBrowserRouter([
               {
                 index: true,
                 element: <EventDetailPage />,
+                action: deleteEventAction,
               },
               {
                 path: "edit",
                 element: <EditEventPage />,
+                action: manipulateEventAction,
               },
             ],
           },
           {
             path: "new",
             element: <NewEventPage />,
-            action: newEventAction,
+            action: manipulateEventAction,
           },
         ],
+      },
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+        action: newsletterAction,
       },
     ],
   },
